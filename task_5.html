@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/task_5.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <h2>TO DO LIST</h2>
+            <div class="form row">
+                <input type="text" class="inputName" id="inputName" placeholder="Add user name...">
+                <input type="text" class="inputTask" id="inputTask" placeholder="Add new task...">
+                <button type="submit" onclick="getTask();return false"><i class="far fa-plus-square"></i></button>
+            </div>
+            <ul id="li_task">
+                <li class="row">
+                    <div class="content">
+                        <input type="checkbox" onclick="taskComplete(this)">
+                        <span id="user">User Name</span>
+                    </div>
+                    <div>
+                        <span id="task">Task Item</span>
+                    </div>
+
+                    <div class="icon">
+                        <i class="delete-icon fa fa-trash" onclick="removeTask(this)"></i>
+                        <i class="update-icon fa fa-edit" onclick="updateTaskTask(this)"></i>
+                    </div>
+
+                </li>
+            </ul>
+            <div id="update">
+
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/task_5.js"></script>
+</body>
+
+</html>
